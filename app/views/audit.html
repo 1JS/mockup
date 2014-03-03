@@ -1,0 +1,94 @@
+<section>
+    <div class="row">
+
+        <section class="col-xs-4">
+            <div class="page-header">
+                <h2>Filters</h2>
+            </div>
+
+            <section class="filters">
+                <h4>Scope:</h4>
+                <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default btn-block" id="drop1" role="button" data-toggle="dropdown" href="#" dropdown>Dropdown <b class="caret"></b></a>
+                    <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 3</a></li>
+                    </ul>
+                </div>                    
+
+                <hr>
+                <h4>Group:</h4>
+                <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default btn-block" id="drop1" role="button" data-toggle="dropdown" href="#" dropdown>Dropdown <b class="caret"></b></a>
+                    <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 3</a></li>
+                    </ul>
+                </div>
+
+                <hr>
+                <h4>Keys:</h4>
+                <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default btn-block" id="drop1" role="button" data-toggle="dropdown" href="#" dropdown>Dropdown <b class="caret"></b></a>
+                    <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 3</a></li>
+                    </ul>
+                </div>  
+            </section>
+        </section>
+
+        <section class="col-xs-8">
+            <div class="page-header">
+                <h2>Properties</h2>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Action</th>
+                        <th>ChangeBy</th>
+                        <th>ChangeDate</th>
+                        <th>Revert</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Value1</td>
+                        <td>Update</td>
+                        <td>Yifan</td>
+                        <td>02/18/2014</td>
+                        <td><a href="" ng-click="revert()" class="btn btn-default">Revert</a></td>
+                    </tr>
+                    <tr>
+                        <td>Value2</td>
+                        <td>Update</td>
+                        <td>Yifan</td>
+                        <td>02/19/2014</td>
+                        <td><a href="" ng-click="revert()" class="btn btn-default">Revert</a></td>
+                    </tr>
+                </tbody>
+            <table>
+        </section>
+    </div>
+
+    <!-- Revert -->
+    <script type="text/ng-template" id="revertProperty.html">
+        <div class="modal-header">
+            <h4>Revert Property</h4>
+        </div>
+        <div class="modal-body">
+            <p>Do you want to revert it to this value?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="" ng-click="revert()" class="btn btn-primary">YES</a>
+            <a href="" ng-click="cancel()" class="btn btn-default">NO</a>            
+        </div>
+    </script>
+    <!-- end Revert -->
+</section>

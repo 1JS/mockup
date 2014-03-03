@@ -1,0 +1,137 @@
+
+<section>
+    <div class="row">
+
+        <!-- Filters -->
+        <section class="col-xs-4">
+            <div class="page-header">
+                <h2>Filters</h2>
+            </div>
+
+            <section class="filters">
+                <h4>Scope:</h4>
+                <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default btn-block" id="drop1" role="button" data-toggle="dropdown" href="#" dropdown>Dropdown <b class="caret"></b></a>
+                    <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 3</a></li>
+                    </ul>
+                </div>                    
+
+                <hr>
+                <h4>Group:</h4>
+                <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default btn-block" id="drop1" role="button" data-toggle="dropdown" href="#" dropdown>Dropdown <b class="caret"></b></a>
+                    <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">Option 3</a></li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <!-- end Filters -->
+
+        <!-- Properties -->
+        <section class="col-xs-8">
+            <div class="page-header">
+                <h2>Properties</h2>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="property in properties">
+                        <td><a href="{{'#/audit?key=' + property.key}}">{{property.key}}</a></td>
+                        <td>{{property.val}}</td>
+                        <td>
+                            <a href="" ng-click="edit(property)"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <span class="space"></span>
+                            <a href="" ng-click="remove(property)"><span class="glyphicon glyphicon-remove"></span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            <table>
+            <div class="pull-right">
+                <a ng-click="add()" class="btn btn-primary">Add New Key</a>
+            </div>
+        </section>
+        <!-- end Properties -->
+
+    </div>
+
+    <!-- Add -->
+    <script type="text/ng-template" id="addProperty.html">
+        <div class="modal-header">
+            <h4>Add Property</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Key:</label>
+                    <div class="col-sm-9">
+                        <input type="text" 
+                               class="form-control"
+                               ng-model="property.key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Value:</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               class="form-control"
+                               ng-model="property.val">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" ng-click="add()" class="btn btn-primary">SAVE</a>
+            <a href="" ng-click="cancel()" class="btn btn-default">CANCEL</a>
+        </div>
+    </script>
+    <!-- end Add -->
+
+    <!-- Edit -->
+    <script type="text/ng-template" id="editProperty.html">
+        <div class="modal-header">
+            <h4>Edit Property</h4>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <label for="">Enter the new value of key</label>
+                <input type="text"
+                       class="form-control"
+                       ng-model="newProperty.val">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="" ng-click="save()" class="btn btn-primary">SAVE</a>
+            <a href="" ng-click="cancel()" class="btn btn-default">CANCEL</a>
+        </div>
+    </script>
+    <!-- end Edit -->
+
+    <!-- Remove -->
+    <script type="text/ng-template" id="removeProperty.html">
+        <div class="modal-header">
+            <h4>Remove Property</h4>
+        </div>
+        <div class="modal-body">
+            <p>Do you want to delete key?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="" ng-click="yes()" class="btn btn-primary">YES</a>
+            <a href="" ng-click="cancel()" class="btn btn-default">NO</a>            
+        </div>
+    </script>
+    <!-- end Remove -->
+</section>
